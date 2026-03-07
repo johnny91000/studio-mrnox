@@ -53,3 +53,22 @@ function createSparkle(x, y) {
     // Suppression propre dès que l'animation finit
     animation.onfinish = () => sparkle.remove();
 }
+
+// Effet d'onde au toucher (Ripple Effect)
+document.addEventListener('touchstart', function(e) {
+    // On récupère les coordonnées du doigt
+    const touch = e.touches[0];
+    
+    // On crée un petit cercle lumineux temporaire
+    const ripple = document.createElement('div');
+    ripple.className = 'touch-ripple';
+    ripple.style.left = touch.pageX + 'px';
+    ripple.style.top = touch.pageY + 'px';
+    
+    document.body.appendChild(ripple);
+    
+    // On le supprime après l'animation
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}, false);
