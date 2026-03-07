@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander | MR NOX TV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="cursor-glow"></div>
+    
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="studio.html" class="active">STUDIO</a>
+        <a href="creations.html">CRÉATIONS</a>
+        <a href="apropos.html">À PROPOS</a>
+    </nav>
+
+    <div class="container">
+        <section id="commander">
+            <div class="section-header">
+                <span class="subtitle">BOOKING SYSTEM</span>
+                <h2><span>/</span> RÉSERVER UNE SESSION</h2>
+            </div>
+
+            <div class="order-box-premium">
+                <form data-netlify="true" name="contact-studio" method="POST">
+                    <input type="hidden" name="form-name" value="contact-studio">
+                    
+                    <div class="form-main-grid">
+                        <div class="form-row">
+                            <div class="input-wrapper">
+                                <i class="fas fa-signature"></i>
+                                <input type="text" name="name" placeholder="NOM D'ARTISTE" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <i class="fas fa-at"></i>
+                                <input type="email" name="email" placeholder="VOTRE EMAIL" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-wrapper">
+                                <i class="fas fa-compact-disc"></i>
+                                <select name="service" required>
+                                    <option value="" disabled selected>CHOISIR UN SERVICE</option>
+                                    <option value="instru">INSTRU SEULE - 5€</option>
+                                    <option value="pack">PACK COMPLET - 10€</option>
+                                    <option value="album">PROJET COMPLET - DEVIS</option>
+                                </select>
+                            </div>
+                            <div class="input-wrapper">
+                                <i class="fas fa-calendar-day"></i>
+                                <input type="date" name="date_preferee" required>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <i class="fas fa-terminal"></i>
+                            <textarea name="details" rows="4" placeholder="DÉTAILS DU PROJET (BPM, STYLE, RÉFÉRENCES...)" required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-studio-neon">
+                        LANCER LE PROJET <i class="fas fa-rocket"></i>
+                    </button>
+                </form>
+
+                <div class="privacy-bar" style="margin-top: 25px; text-align: center; opacity: 0.5; font-size: 0.7rem; letter-spacing: 1px;">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>SÉCURITÉ ASSURÉE PAR NETLIFY | DROIT DE SUPPRESSION SUR DEMANDE</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="avis" style="margin-top: 100px; padding-bottom: 50px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 20px; flex-wrap: wrap; gap: 20px;">
+                <h2 style="margin: 0;"><span>/</span> AVIS CLIENTS</h2>
+
+                <a href="https://senja.io/p/google-o5K/r/KpUwd9" target="_blank" class="btn-redirection-avis">
+                    LAISSER UN RETOUR <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <script src="https://widget.senja.io/widget/5cc37e42-3367-4065-a6f0-03d722b05cd9/platform.js" type="text/javascript" async></script>
+            <div class="senja-embed" data-id="5cc37e42-3367-4065-a6f0-03d722b05cd9" data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
+        </section>
+    </div>
+
+    <footer>
+        <div style="margin-bottom: 25px;">
+            <a href="https://instagram.com/mrnox_tv" target="_blank" style="color: var(--blue); font-size: 1.5rem; margin: 0 15px;"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@mrnox_tv" target="_blank" style="color: var(--blue); font-size: 1.5rem; margin: 0 15px;"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p style="color: #444; font-size: 0.8rem; letter-spacing: 2px;">MR NOX TV &copy; 2026</p>
+    </footer>
+
+    <a href="https://m.me/TON_NOM_UTILISATEUR" class="messenger-sticky" target="_blank">
+        <i class="fab fa-facebook-messenger"></i>
+        <span>Une question ?</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
