@@ -5,11 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confidentialité | MR NOX TV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Correction spécifique pour le titre long sur mobile */
+        h1 {
+            font-size: clamp(1.5rem, 7vw, 2.5rem); /* S'adapte à la largeur de l'écran */
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+                margin-top: 60px !important;
+            }
+            h1 {
+                flex-direction: row;
+                line-height: 1.2;
+            }
+            h1 span {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div id="cursor-glow"></div>
+    
     <nav>
         <a href="index.html">ACCUEIL</a>
-        <a href="studio.html" class="active">STUDIO</a>
+        <a href="studio.html">STUDIO</a>
         <a href="creations.html">CRÉATIONS</a>
         <a href="apropos.html">À PROPOS</a>
     </nav>
@@ -18,19 +46,27 @@
         <h1 style="color: var(--blue);"><span>/</span> POLITIQUE DE CONFIDENTIALITÉ</h1>
         
         <section style="margin-top: 40px;">
-            <h3 style="color: var(--pink);">1. COLLECTE DES DONNÉES</h3>
-            <p>Les informations collectées via le formulaire (Nom d'artiste, Email, détails du projet) sont exclusivement utilisées pour l'organisation de vos sessions studio.</p>
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px;">01. COLLECTE DES DONNÉES</h3>
+                <p style="color: #ccc; font-size: 0.95rem;">Les informations collectées via le formulaire (Nom d'artiste, Email, détails du projet) sont exclusivement utilisées pour l'organisation de vos sessions studio et la communication directe entre nous.</p>
+            </div>
 
-            <h3 style="color: var(--pink); margin-top: 30px;">2. SÉCURITÉ</h3>
-            <p>Vos données sont transmises via un protocole sécurisé (SSL). Nous utilisons des services tiers de confiance pour garantir la réception de vos messages.</p>
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px;">02. SÉCURITÉ</h3>
+                <p style="color: #ccc; font-size: 0.95rem;">Vos données sont transmises via un protocole sécurisé (SSL). Nous nous engageons à ne jamais vendre ou partager vos informations à des fins commerciales.</p>
+            </div>
 
-            <h3 style="color: var(--pink); margin-top: 30px;">3. VOS DROITS</h3>
-            <p>Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression de vos données. Pour toute demande, contactez-nous via Instagram ou Messenger.</p>
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px;">03. VOS DROITS</h3>
+                <p style="color: #ccc; font-size: 0.95rem;">Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression totale de vos données. Pour toute demande de retrait, contactez-moi directement sur Instagram ou via Messenger.</p>
+            </div>
         </section>
 
-        <a href="studio.html" style="display: inline-block; margin-top: 50px; color: var(--blue); text-decoration: none; border: 1px solid var(--blue); padding: 10px 20px;">
+        <a href="studio.html" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 40px; color: var(--blue); text-decoration: none; border: 1px solid var(--blue); padding: 12px 25px; font-size: 0.8rem; letter-spacing: 2px; transition: 0.3s;" onmouseover="this.style.background='var(--blue)'; this.style.color='black'" onmouseout="this.style.background='transparent'; this.style.color='var(--blue)'">
             <i class="fas fa-arrow-left"></i> RETOUR AU STUDIO
         </a>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
