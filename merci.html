@@ -2,14 +2,39 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merci ! | MR NOX TV</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div id="cursor-glow"></div>
+
+    <nav>
+        <a href="index.html" data-en="HOME">ACCUEIL</a>
+        <div class="lang-switch">
+            <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+            <span>/</span>
+            <button onclick="changeLang('en')" id="btn-en">EN</button>
+        </div>
+    </nav>
+
     <header class="hero">
-        <h1 style="color: var(--green); -webkit-text-fill-color: var(--green);">DEMANDE REÇUE !</h1>
-        <p>Je reviens vers toi très rapidement par email pour confirmer ta session.</p>
-        <a href="index.html" class="btn-main" style="margin-top: 30px;">Retour à l'accueil</a>
+        <h1 style="color: var(--green); -webkit-text-fill-color: var(--green);" data-en="REQUEST RECEIVED !">DEMANDE REÇUE !</h1>
+        <p data-en="I will get back to you very quickly by email to confirm your session.">Je reviens vers toi très vite par mail pour confirmer ta session.</p>
+        <div style="margin-top: 30px;">
+            <a href="index.html" class="btn-main" data-en="BACK TO HOME">RETOUR À L'ACCUEIL</a>
+        </div>
     </header>
+
+    <script src="script.js"></script>
 </body>
 </html>

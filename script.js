@@ -72,3 +72,44 @@ document.addEventListener('touchstart', function(e) {
         ripple.remove();
     }, 600);
 }, false);
+
+/* --- SYSTÈME DE TRADUCTION --- */
+
+function changeLang(lang) {
+    const elements = document.querySelectorAll('[data-en]');
+    
+    elements.forEach(el => {
+        // On sauvegarde le texte français d'origine s'il n'existe pas encore
+        if (!el.dataset.fr) {
+            el.dataset.fr = el.innerHTML;
+        }
+
+        if (lang === 'en') {
+            // On affiche le texte anglais
+            el.innerHTML = el.dataset.en;
+            
+            // Mise à jour visuelle des boutons
+            if(document.getElementById('btn-fr')) document.getElementById('btn-fr').classList.remove('active');
+            if(document.getElementById('btn-en')) document.getElementById('btn-en').classList.add('active');
+        } else {
+            // On remet le texte français
+            el.innerHTML = el.dataset.fr;
+            
+            // Mise à jour visuelle des boutons
+            if(document.getElementById('btn-en')) document.getElementById('btn-en').classList.remove('active');
+            if(document.getElementById('btn-fr')) document.getElementById('btn-fr').classList.add('active');
+        }
+    });
+    
+    // On enregistre le choix pour les autres pages
+    localStorage.setItem('preferred-lang', lang);
+}
+
+// Au chargement de la page, on vérifie si une langue était déjà choisie
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferred-lang');
+    if (savedLang) {
+        // Un petit délai pour s'assurer que tout le HTML est bien prêt
+        setTimeout(() => changeLang(savedLang), 10);
+    }
+});

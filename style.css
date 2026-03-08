@@ -24,14 +24,34 @@ nav {
     top: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     z-index: 1000;
     backdrop-filter: blur(15px);
     border-bottom: 1px solid #222;
 }
 
-nav a { color: white; text-decoration: none; font-size: 0.85rem; font-weight: bold; opacity: 0.6; transition: 0.3s; }
-nav a:hover, nav a.active { opacity: 1; color: var(--blue); }
+/* État normal : Blanc cassé (opacité 0.6) */
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-size: 0.85rem; 
+    font-weight: bold; 
+    opacity: 0.6; 
+    transition: 0.3s; 
+}
+
+/* État AU SURVOL : On passe en ROSE */
+nav a:hover { 
+    opacity: 1; 
+    color: var(--pink); 
+}
+
+/* État LIEN ACTIF : On reste en BLEU */
+nav a.active { 
+    opacity: 1; 
+    color: var(--blue); 
+}
 
 /* --- HERO SECTION & LUMIÈRES LATÉRALES --- */
 .hero {
@@ -82,6 +102,7 @@ nav a:hover, nav a.active { opacity: 1; color: var(--blue); }
 .logo-main {
     width: 150px; height: 150px; border-radius: 50%;
     position: relative; z-index: 3; border: 3px solid rgba(255,255,255,0.1);
+    object-fit: cover;
 }
 
 /* --- EQUALIZER --- */
@@ -152,6 +173,8 @@ footer { text-align: center; padding: 50px; opacity: 0.5; font-size: 0.8rem; }
 
 .profile-img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
@@ -206,42 +229,33 @@ footer { text-align: center; padding: 50px; opacity: 0.5; font-size: 0.8rem; }
     .services-mini-grid { grid-template-columns: 1fr; }
 }
 
-C'est noté. Pour que le design de ton Studio soit vraiment impressionnant tout en restant cohérent avec ce fichier CSS, on va utiliser des champs avec icônes, un système de grille propre et des bordures qui s'allument au clic.
-
-Voici le bloc de code à ajouter à la fin de ton fichier CSS pour transformer la section Studio :
-
-CSS
 /* ==========================================================
    DESIGN STUDIO PREMIUM (FORMULAIRE)
    ========================================================== */
 
-/* Conteneur principal du formulaire */
 .order-box-premium {
     background: var(--card);
     padding: 40px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     position: relative;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Barre de lueur bleue décorative en haut */
 .order-box-premium::before {
     content: ''; 
     position: absolute; top: 0; left: 0; width: 100%; height: 2px;
     background: linear-gradient(90deg, transparent, var(--blue), transparent);
 }
 
-/* Grille pour aligner 2 par 2 */
 .form-main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-/* Style des groupes d'entrée avec icônes */
 .input-wrapper {
     display: flex;
     align-items: center;
@@ -270,17 +284,14 @@ CSS
     outline: none;
 }
 
-/* Le champ Message et le Bouton prennent toute la largeur */
 .full-width { grid-column: span 2; }
 
-/* Effet d'illumination au clic (Focus) */
 .input-wrapper:focus-within {
     border-color: var(--blue);
     box-shadow: 0 0 15px rgba(0, 210, 255, 0.15);
     background: rgba(0, 210, 255, 0.02);
 }
 
-/* Bouton Spécial Studio Neon */
 .btn-studio-neon {
     width: 100%;
     margin-top: 30px;
@@ -306,7 +317,6 @@ CSS
     transform: translateY(-2px);
 }
 
-/* Barre de confidentialité discrète */
 .privacy-bar {
     margin-top: 30px;
     display: flex;
@@ -319,30 +329,18 @@ CSS
     padding-top: 20px;
 }
 
-/* Mobile : on repasse sur une seule colonne */
 @media (max-width: 768px) {
     .form-main-grid { grid-template-columns: 1fr; }
     .full-width { grid-column: span 1; }
     .order-box-premium { padding: 25px; }
 }
 
-/* Ajustement pour les groupes de deux champs */
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* On s'assure que les icônes et inputs sont bien alignés horizontalement */
-.input-wrapper {
-    display: flex;
-    align-items: center;
-    background: rgba(0,0,0,0.3);
-    border: 1px solid #222;
-    border-radius: 4px;
-}
-
-/* Espacement du bouton Messenger pour ne pas cacher le footer sur mobile */
 @media (max-width: 768px) {
     .messenger-sticky {
         bottom: 10px;
@@ -352,52 +350,42 @@ CSS
     }
 }
 
-/* Tous les chiffres en bleu par défaut */
 .stats-container div .stat-number {
     color: var(--blue);
 }
 
-/* Uniquement le 2ème (celui du milieu) en rose */
 .stats-container div:nth-child(2) .stat-number {
     color: var(--pink);
 }
 
-/* Change uniquement l'icône calendrier en noir */
 .input-wrapper i.fa-calendar-day {
     color: #000000 !important;
-    filter: none !important; /* Enlève la lueur bleue pour qu'il soit bien net */
+    filter: none !important;
     opacity: 1 !important;
 }
 
-/* Optionnel : changer aussi la couleur du texte de la date quand on choisit */
 input[type="date"] {
-    color-scheme: dark; /* Garde le sélecteur de date lisible sur fond noir */
+    color-scheme: dark;
 }
 
-/* --- FIX CONTRASTE SELECTION (ANTI BLANC SUR BLANC) --- */
-
-/* Force le calendrier et le menu déroulant en mode sombre */
 input[type="date"], 
 select {
-    color-scheme: dark; /* Indique au navigateur d'utiliser son thème sombre natif */
-    background-color: #000000 !important; /* Gris très foncé pour le fond */
-    color: white !important; /* Texte bien blanc */
+    color-scheme: dark;
+    background-color: #000000 !important;
+    color: white !important;
 }
 
-/* Style spécifique pour les options du menu déroulant (Service) */
 select option {
-    background-color: #111116; /* Couleur de tes cartes */
+    background-color: #111116;
     color: white;
 }
 
-/* Change la couleur du texte quand on tape ou sélectionne */
 .input-wrapper input:focus, 
 .input-wrapper select:focus, 
 .input-wrapper textarea:focus {
-    color: var(--blue) !important; /* Le texte devient bleu quand on écrit */
+    color: var(--blue) !important;
 }
 
-/* Style du bouton "Laisser un retour" */
 .btn-avis {
     padding: 10px 20px;
     border: 1px solid var(--blue);
@@ -422,7 +410,6 @@ select option {
     border-radius: 10px;
 }
 
-/* Responsive mobile pour le header des avis */
 @media (max-width: 768px) {
     #avis div[style*="flex-end"] {
         flex-direction: column;
@@ -432,7 +419,6 @@ select option {
     }
 }
 
-/* Style du bouton de redirection Avis */
 .btn-redirection-avis {
     padding: 10px 20px;
     border: 1px solid var(--blue);
@@ -450,12 +436,11 @@ select option {
 
 .btn-redirection-avis:hover {
     background: var(--blue);
-    color: #000; /* Texte noir quand on survole pour plus de lisibilité */
+    color: #000;
     box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
     transform: translateY(-2px);
 }
 
-/* Ajustement pour mobile */
 @media (max-width: 768px) {
     #avis div[style*="display: flex"] {
         justify-content: center !important;
@@ -465,7 +450,6 @@ select option {
 
 /* --- FINITION STUDIO MR NOX --- */
 
-/* 1. Couleurs de saisie (BLEU) */
 .input-wrapper i {
     color: var(--blue) !important;
     filter: drop-shadow(0 0 5px rgba(0, 210, 255, 0.4));
@@ -476,13 +460,11 @@ select option {
     background: rgba(0, 210, 255, 0.02) !important;
 }
 
-/* 2. Icône Calendrier Spécifique (NOIR) */
 .input-wrapper i.fa-calendar-day {
     color: #000000 !important;
     filter: none !important;
 }
 
-/* 3. Bouton d'action (ROSE) */
 .btn-studio-neon {
     border: 2px solid var(--pink) !important;
     color: white !important;
@@ -494,14 +476,12 @@ select option {
     box-shadow: 0 0 30px rgba(255, 45, 149, 0.6) !important;
 }
 
-/* 4. Fix contraste Selection (Anti blanc sur blanc) */
 input[type="date"], select, select option {
     color-scheme: dark;
     background-color: #000000 !important;
     color: white !important;
 }
 
-/* 5. Texte de sécurité */
 .privacy-bar {
     opacity: 0.6;
     font-size: 0.65rem;
@@ -510,14 +490,12 @@ input[type="date"], select, select option {
     color: #888;
 }
 
-/* Cache le halo du curseur sur les téléphones et tablettes */
 @media (max-pointer: fine) {
     #cursor-glow {
         display: none !important;
     }
 }
 
-/* Version alternative si la règle au-dessus ne suffit pas */
 @media (max-width: 1024px) {
     #cursor-glow {
         display: none !important;
@@ -528,7 +506,7 @@ input[type="date"], select, select option {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: rgba(0, 210, 255, 0.4); /* Ton bleu néon */
+    background: rgba(0, 210, 255, 0.4);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -552,4 +530,49 @@ input[type="date"], select, select option {
 .privacy-link a:hover {
     color: var(--blue) !important;
     opacity: 1;
+}
+
+.lang-switch {
+    margin-left: 15px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: 0.3s;
+    padding: 0;
+}
+
+.lang-switch button:hover {
+    opacity: 1;
+    color: var(--pink);
+}
+
+.lang-switch button.active {
+    opacity: 1;
+    color: var(--blue) !important;
+    text-shadow: 0 0 10px var(--blue);
+}
+
+.lang-switch span {
+    color: #333;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    nav {
+        gap: 15px;
+        padding: 15px 10px;
+    }
+    .lang-switch {
+        margin-left: 5px;
+    }
 }

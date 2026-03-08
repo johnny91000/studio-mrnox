@@ -11,38 +11,44 @@
     <div id="cursor-glow"></div>
     
     <nav>
-        <a href="index.html">ACCUEIL</a>
-        <a href="studio.html">STUDIO</a>
-        <a href="creations.html" class="active">CRÉATIONS</a>
-        <a href="apropos.html">À PROPOS</a>
+        <a href="index.html" data-en="HOME">ACCUEIL</a>
+        <a href="studio.html" data-en="STUDIO">STUDIO</a>
+        <a href="creations.html" class="active" data-en="CREATIONS">CRÉATIONS</a>
+        <a href="apropos.html" data-en="ABOUT">À PROPOS</a>
+
+        <div class="lang-switch">
+            <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+            <span>/</span>
+            <button onclick="changeLang('en')" id="btn-en">EN</button>
+        </div>
     </nav>
 
     <div class="container">
-        <h2 style="text-align: center;"><span>/</span> PORTFOLIO</h2>
+        <h2 style="text-align: center;" data-en="<span>/</span> PORTFOLIO"><span>/</span> PORTFOLIO</h2>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             
             <div class="order-box" style="text-align: center;">
                 <img src="portu.png" alt="Portuguesa" style="width: 120px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 45, 149, 0.3);">
                 <h3 style="color:var(--pink)">PORTUGUESA</h3>
-                <p style="font-size: 0.8rem; opacity: 0.7;">LATIN POP URBAIN</p>
-                <a href="https://www.tiktok.com/@mrnox_tv/video/7375538794598993175" target="_blank" class="btn-main" style="padding: 10px 25px; font-size: 0.8rem;">ÉCOUTER</a>
+                <p style="font-size: 0.8rem; opacity: 0.7;" data-en="URBAN LATIN POP">LATIN POP URBAIN</p>
+                <a href="https://www.tiktok.com/@mrnox_tv/video/7575538794598993175?is_from_webapp=1&sender_device=pc&web_id=7600759985232823830" target="_blank" class="btn-main" style="padding: 10px 25px; font-size: 0.8rem;" data-en="LISTEN">ÉCOUTER</a>
             </div>
 
             <div class="order-box" style="text-align: center;">
                 <img src="Espagnola.png" alt="Espagnola" style="width: 120px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);">
                 <h3 style="color:var(--blue)">ESPAÑOLA</h3>
-                <p style="font-size: 0.8rem; opacity: 0.7;">REGGAETON MIX</p>
-                <a href="https://www.tiktok.com/@mrnox_tv/video/7347272446160686358" target="_blank" class="btn-main" style="padding: 10px 25px; font-size: 0.8rem;">ÉCOUTER</a>
+                <p style="font-size: 0.8rem; opacity: 0.7;" data-en="REGGAETON MIX">REGGAETON MIX</p>
+                <a href="https://www.tiktok.com/@mrnox_tv/video/7547272446160686358?is_from_webapp=1&sender_device=pc&web_id=7600759985232823830" target="_blank" class="btn-main" style="padding: 10px 25px; font-size: 0.8rem;" data-en="LISTEN">ÉCOUTER</a>
             </div>
 
         </div>
 
         <section class="coming-soon-section">
-            <h2 class="coming-soon-title"><span>/</span> PROCHAINEMENT</h2>
+            <h2 class="coming-soon-title" data-en="<span>/</span> COMING SOON"><span>/</span> PROCHAINEMENT</h2>
             <div style="text-align: center; padding: 40px; border: 1px dashed rgba(0, 210, 255, 0.3); border-radius: 15px; background: rgba(255, 255, 255, 0.02);">
-                <div class="suspense-text">PROJET MYSTÈRE</div>
-                <p style="color: #666; font-size: 0.9rem; margin-top: 15px; font-style: italic;">
+                <div class="suspense-text" data-en="MYSTERY PROJECT">PROJET MYSTÈRE</div>
+                <p style="color: #666; font-size: 0.9rem; margin-top: 15px; font-style: italic;" data-en="Something is brewing in the shadows...">
                     Quelque chose se prépare dans l'ombre...
                 </p>
             </div>
@@ -59,7 +65,7 @@
 
     <a href="https://m.me/61564227401513" class="messenger-sticky" target="_blank">
         <i class="fab fa-facebook-messenger"></i>
-        <span>Des questions ?</span>
+        <span data-en="Any questions?">Des questions ?</span>
     </a>
 
     <script src="script.js"></script>

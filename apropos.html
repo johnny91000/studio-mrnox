@@ -11,16 +11,22 @@
     <div id="cursor-glow"></div>
     
     <nav>
-        <a href="index.html">ACCUEIL</a>
-        <a href="studio.html">STUDIO</a>
-        <a href="creations.html">CRÉATIONS</a>
-        <a href="apropos.html" class="active">À PROPOS</a>
+        <a href="index.html" data-en="HOME">ACCUEIL</a>
+        <a href="studio.html" data-en="STUDIO">STUDIO</a>
+        <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
+        <a href="apropos.html" class="active" data-en="ABOUT">À PROPOS</a>
+
+        <div class="lang-switch">
+            <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+            <span>/</span>
+            <button onclick="changeLang('en')" id="btn-en">EN</button>
+        </div>
     </nav>
 
     <div class="container">
         <header style="text-align: center; margin-bottom: 60px;">
-            <h2 class="section-title"><span>/</span> MON HISTOIRE</h2>
-            <p style="opacity: 0.6; letter-spacing: 2px;">L'OBSESSION DU SON PARFAIT</p>
+            <h2 class="section-title" data-en="<span>/</span> MY STORY"><span>/</span> MON HISTOIRE</h2>
+            <p style="opacity: 0.6; letter-spacing: 2px;" data-en="THE OBSESSION WITH PERFECT SOUND">L'OBSESSION DU SON PARFAIT</p>
         </header>
         
         <div class="about-grid">
@@ -30,9 +36,9 @@
             </div>
 
             <div class="about-text-content">
-                <h3>L'univers MR NOX TV</h3>
-                <p>Tout a commencé par une fascination pour la texture du son. Derrière chaque création se cache une volonté de repousser les limites. Spécialisé dans les productions percutantes et les ambiances immersives, je transforme vos maquettes en véritables hits.</p>
-                <p>Passionné par la culture urbaine et les sonorités modernes, mon objectif est d'apporter une signature sonore unique à chaque projet qui franchit les portes du studio.</p>
+                <h3 data-en="The MR NOX TV Universe">L'univers MR NOX TV</h3>
+                <p data-en="It all started with a fascination for the texture of sound. Behind every creation lies a desire to push the boundaries. Specialized in hard-hitting productions and immersive atmospheres, I transform your demos into real hits.">Tout a commencé par une fascination pour la texture du son. Derrière chaque création se cache une volonté de repousser les limites. Spécialisé dans les productions percutantes et les ambiances immersives, je transforme vos maquettes en véritables hits.</p>
+                <p data-en="Passionate about urban culture and modern sounds, my goal is to bring a unique sonic signature to every project that enters the studio.">Passionné par la culture urbaine et les sonorités modernes, mon objectif est d'apporter une signature sonore unique à chaque projet qui franchit les portes du studio.</p>
                 <div class="signature">Mr Nox</div>
             </div>
         </div>
@@ -40,13 +46,13 @@
         <div class="services-mini-grid" style="margin-top: 80px;">
             <div class="order-box">
                 <i class="fas fa-music"></i>
-                <h4>PRODUCTION</h4>
-                <p>Beats sur mesure et arrangements originaux.</p>
+                <h4 data-en="PRODUCTION">PRODUCTION</h4>
+                <p data-en="Custom beats and original arrangements.">Beats sur mesure et arrangements originaux.</p>
             </div>
             <div class="order-box">
                 <i class="fas fa-sliders-h"></i>
-                <h4>MIX / MASTER</h4>
-                <p>Un son puissant, prêt pour les plateformes.</p>
+                <h4 data-en="MIX / MASTER">MIX / MASTER</h4>
+                <p data-en="Powerful sound, ready for platforms.">Un son puissant, prêt pour les plateformes.</p>
             </div>
         </div>
     </div>
