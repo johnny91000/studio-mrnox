@@ -1,70 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos | MR NOX TV</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <div id="cursor-glow"></div>
-    
-    <nav>
-        <a href="index.html" data-en="HOME">ACCUEIL</a>
-        <a href="studio.html" data-en="STUDIO">STUDIO</a>
-        <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
-        <a href="apropos.html" class="active" data-en="ABOUT">À PROPOS</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>À Propos | MR NOX TV</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body>
+        <div id="cursor-glow"></div>
 
-        <div class="lang-switch">
-            <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
-            <span>/</span>
-            <button onclick="changeLang('en')" id="btn-en">EN</button>
-        </div>
-    </nav>
+        <nav>
+            <a href="index.html" data-en="HOME">ACCUEIL</a>
+            <a href="studio.html" data-en="STUDIO">STUDIO</a>
+            <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
+            <a href="apropos.html" class="active" data-en="ABOUT">À PROPOS</a>
 
-    <div class="container">
-        <header style="text-align: center; margin-bottom: 60px;">
-            <h2 class="section-title" data-en="<span>/</span> MY STORY"><span>/</span> MON HISTOIRE</h2>
-            <p style="opacity: 0.6; letter-spacing: 2px;" data-en="THE OBSESSION WITH PERFECT SOUND">L'OBSESSION DU SON PARFAIT</p>
-        </header>
-        
-        <div class="about-grid">
-            <div class="about-image-container">
-                <div class="image-glow-bg"></div>
-                <img src="logo.webp" alt="Studio MR NOX" class="profile-img">
+            <div class="lang-switch">
+                <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+                <span>/</span>
+                <button onclick="changeLang('en')" id="btn-en">EN</button>
+            </div>
+        </nav>
+
+        <div class="container">
+            <header style="text-align: center; margin-bottom: 60px">
+                <h2 class="section-title" data-en="<span>/</span> MY STORY"><span>/</span> MON HISTOIRE</h2>
+                <p style="opacity: 0.6; letter-spacing: 2px" data-en="THE OBSESSION WITH PERFECT SOUND">
+                    L'OBSESSION DU SON PARFAIT
+                </p>
+            </header>
+
+            <div class="about-grid">
+                <div class="about-image-container">
+                    <div class="image-glow-bg"></div>
+                    <img src="logo.webp" alt="Studio MR NOX" class="profile-img" />
+                </div>
+
+                <div class="about-text-content">
+                    <h3 data-en="The MR NOX TV Universe">L'univers MR NOX TV</h3>
+                    <p
+                        data-en="It all started with a fascination for the texture of sound. Behind every creation lies a desire to push the boundaries. Specialized in hard-hitting productions and immersive atmospheres, I transform your demos into real hits."
+                    >
+                        Tout a commencé par une fascination pour la texture du son. Derrière chaque création se cache
+                        une volonté de repousser les limites. Spécialisé dans les productions percutantes et les
+                        ambiances immersives, je transforme vos maquettes en véritables hits.
+                    </p>
+                    <p
+                        data-en="Passionate about urban culture and modern sounds, my goal is to bring a unique sonic signature to every project that enters the studio."
+                    >
+                        Passionné par la culture urbaine et les sonorités modernes, mon objectif est d'apporter une
+                        signature sonore unique à chaque projet qui franchit les portes du studio.
+                    </p>
+                    <div class="signature">Mr Nox</div>
+                </div>
             </div>
 
-            <div class="about-text-content">
-                <h3 data-en="The MR NOX TV Universe">L'univers MR NOX TV</h3>
-                <p data-en="It all started with a fascination for the texture of sound. Behind every creation lies a desire to push the boundaries. Specialized in hard-hitting productions and immersive atmospheres, I transform your demos into real hits.">Tout a commencé par une fascination pour la texture du son. Derrière chaque création se cache une volonté de repousser les limites. Spécialisé dans les productions percutantes et les ambiances immersives, je transforme vos maquettes en véritables hits.</p>
-                <p data-en="Passionate about urban culture and modern sounds, my goal is to bring a unique sonic signature to every project that enters the studio.">Passionné par la culture urbaine et les sonorités modernes, mon objectif est d'apporter une signature sonore unique à chaque projet qui franchit les portes du studio.</p>
-                <div class="signature">Mr Nox</div>
+            <div class="services-mini-grid" style="margin-top: 80px">
+                <div class="order-box">
+                    <i class="fas fa-music"></i>
+                    <h4 data-en="PRODUCTION">PRODUCTION</h4>
+                    <p data-en="Custom beats and original arrangements.">Beats sur mesure et arrangements originaux.</p>
+                </div>
+                <div class="order-box">
+                    <i class="fas fa-sliders-h"></i>
+                    <h4 data-en="MIX / MASTER">MIX / MASTER</h4>
+                    <p data-en="Powerful sound, ready for platforms.">Un son puissant, prêt pour les plateformes.</p>
+                </div>
             </div>
         </div>
 
-        <div class="services-mini-grid" style="margin-top: 80px;">
-            <div class="order-box">
-                <i class="fas fa-music"></i>
-                <h4 data-en="PRODUCTION">PRODUCTION</h4>
-                <p data-en="Custom beats and original arrangements.">Beats sur mesure et arrangements originaux.</p>
+        <footer>
+            <div class="social-links">
+                <a href="https://instagram.com/mrnox_tv" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@mrnox_tv" target="_blank"><i class="fab fa-tiktok"></i></a>
             </div>
-            <div class="order-box">
-                <i class="fas fa-sliders-h"></i>
-                <h4 data-en="MIX / MASTER">MIX / MASTER</h4>
-                <p data-en="Powerful sound, ready for platforms.">Un son puissant, prêt pour les plateformes.</p>
-            </div>
-        </div>
-    </div>
+            <p>MR NOX TV &copy; 2026</p>
+        </footer>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://instagram.com/mrnox_tv" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@mrnox_tv" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-        <p>MR NOX TV &copy; 2026</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

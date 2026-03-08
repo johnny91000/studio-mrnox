@@ -1,107 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR NOX TV | Studio de Production</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <div id="cursor-glow"></div>
-    
-    <nav>
-        <a href="index.html" class="active" data-en="HOME">ACCUEIL</a>
-        <a href="studio.html" data-en="STUDIO">STUDIO</a>
-        <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
-        <a href="apropos.html" data-en="ABOUT">À PROPOS</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MR NOX TV | Studio de Production</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body>
+        <div id="cursor-glow"></div>
 
-        <div class="lang-switch">
-            <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
-            <span>/</span>
-            <button onclick="changeLang('en')" id="btn-en">EN</button>
-        </div>
-    </nav>
+        <nav>
+            <a href="index.html" class="active" data-en="HOME">ACCUEIL</a>
+            <a href="studio.html" data-en="STUDIO">STUDIO</a>
+            <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
+            <a href="apropos.html" data-en="ABOUT">À PROPOS</a>
 
-    <header class="hero">
-        <div class="logo-wrapper">
-            <div class="logo-glow"></div>
-            <div class="equalizer">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="lang-switch">
+                <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+                <span>/</span>
+                <button onclick="changeLang('en')" id="btn-en">EN</button>
             </div>
-            <img src="logo.webp" alt="Logo" class="logo-main">
-        </div>
+        </nav>
 
-        <h1 data-en="MR NOX TV">MR NOX TV</h1>
-        <p class="hero-subtitle" data-en="MUSIC PRODUCTION • MIXING • MASTERING">PRODUCTION MUSICALE • MIXAGE • MASTERING</p>
-        
-        <div style="margin-top: 30px;">
-            <a href="studio.html" class="btn-main" data-en="Book a session">Réserver une session</a>
-        </div>
-    </header>
-
-    <div class="container">
-    <div class="services-grid">
-        <div class="order-box">
-            <i class="fas fa-compact-disc"></i>
-            <h2 data-en="CUSTOM BEATS">BEATS SUR MESURE</h2>
-        </div>
-        <div class="order-box">
-            <i class="fas fa-sliders-h"></i>
-            <h2 data-en="MIXING & MASTERING">MIXAGE & MASTERING</h2>
-        </div>
-        <div class="order-box">
-            <i class="fas fa-microphone-alt"></i>
-            <h2 data-en="RECORDING">ENREGISTREMENT</h2>
-        </div>
-    </div>
-
-    <div style="margin-top: 100px;">
-        <h2 class="section-title" data-en="<span>/</span> LATEST RELEASE"><span>/</span> DERNIÈRE SORTIE</h2>
-        <div class="about-section">
-            <div class="about-image">
-                <img src="portu.webp" alt="Dernière sortie" style="width: 100%; border-radius: 10px;">
+        <header class="hero">
+            <div class="logo-wrapper">
+                <div class="logo-glow"></div>
+                <div class="equalizer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <img src="logo.webp" alt="Logo" class="logo-main" />
             </div>
-            <div class="about-text">
-                <span class="badge" data-en="New Release">New Release</span>
-                <h3>PORTUGUESA</h3>
-                <p data-en="Discover the power of MR NOX TV sound. Precise mixing and pro texture for your future hits.">Découvrez la puissance du son MR NOX TV. Un mixage précis et une texture sonore pro pour vos futurs hits.</p>
-                <a href="creations.html" class="btn-main" style="padding: 10px 25px; font-size: 0.7rem;" data-en="LISTEN">ÉCOUTER</a>
+
+            <h1 data-en="MR NOX TV">MR NOX TV</h1>
+            <p class="hero-subtitle" data-en="MUSIC PRODUCTION • MIXING • MASTERING">
+                PRODUCTION MUSICALE • MIXAGE • MASTERING
+            </p>
+
+            <div style="margin-top: 30px">
+                <a href="studio.html" class="btn-main" data-en="Book a session">Réserver une session</a>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="services-grid">
+                <div class="order-box">
+                    <i class="fas fa-compact-disc"></i>
+                    <h2 data-en="CUSTOM BEATS">BEATS SUR MESURE</h2>
+                </div>
+                <div class="order-box">
+                    <i class="fas fa-sliders-h"></i>
+                    <h2 data-en="MIXING & MASTERING">MIXAGE & MASTERING</h2>
+                </div>
+                <div class="order-box">
+                    <i class="fas fa-microphone-alt"></i>
+                    <h2 data-en="RECORDING">ENREGISTREMENT</h2>
+                </div>
+            </div>
+
+            <div style="margin-top: 100px">
+                <h2 class="section-title" data-en="<span>/</span> LATEST RELEASE"><span>/</span> DERNIÈRE SORTIE</h2>
+                <div class="about-section">
+                    <div class="about-image">
+                        <img src="portu.webp" alt="Dernière sortie" style="width: 100%; border-radius: 10px" />
+                    </div>
+                    <div class="about-text">
+                        <span class="badge" data-en="New Release">New Release</span>
+                        <h3>PORTUGUESA</h3>
+                        <p
+                            data-en="Discover the power of MR NOX TV sound. Precise mixing and pro texture for your future hits."
+                        >
+                            Découvrez la puissance du son MR NOX TV. Un mixage précis et une texture sonore pro pour vos
+                            futurs hits.
+                        </p>
+                        <a
+                            href="creations.html"
+                            class="btn-main"
+                            style="padding: 10px 25px; font-size: 0.7rem"
+                            data-en="LISTEN"
+                            >ÉCOUTER</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <p data-en="Finished Projects">Projets Terminés</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <p data-en="Studio Quality">Qualité Studio</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24H</div>
+                    <p data-en="Response Time">Délai Réponse</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="stats-container">
-        <div class="stat-item">
-            <div class="stat-number">50+</div>
-            <p data-en="Finished Projects">Projets Terminés</p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">100%</div>
-            <p data-en="Studio Quality">Qualité Studio</p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">24H</div>
-            <p data-en="Response Time">Délai Réponse</p>
-        </div>
-    </div>
-</div>
+        <footer>
+            <div class="social-links">
+                <a href="https://instagram.com/mrnox_tv" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@mrnox_tv" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>MR NOX TV &copy; 2026</p>
+        </footer>
 
-<footer>
-    <div class="social-links">
-        <a href="https://instagram.com/mrnox_tv" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://tiktok.com/@mrnox_tv" target="_blank"><i class="fab fa-tiktok"></i></a>
-    </div>
-    <p>MR NOX TV &copy; 2026</p>
-</footer>
+        <a href="https://m.me/61564227401513" class="messenger-sticky" target="_blank">
+            <i class="fab fa-facebook-messenger"></i>
+            <span data-en="Any questions?">Des questions ?</span>
+        </a>
 
-<a href="https://m.me/61564227401513" class="messenger-sticky" target="_blank">
-    <i class="fab fa-facebook-messenger"></i>
-    <span data-en="Any questions?">Des questions ?</span>
-</a>
-
-<script src="script.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

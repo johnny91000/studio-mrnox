@@ -1,86 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confidentialité | MR NOX TV</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Correction spécifique pour le titre long sur mobile */
-        h1 {
-            font-size: clamp(1.5rem, 7vw, 2.5rem); 
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-                margin-top: 60px !important;
-            }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Confidentialité | MR NOX TV</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <style>
+            /* Correction spécifique pour le titre long sur mobile */
             h1 {
-                flex-direction: row;
-                line-height: 1.2;
+                font-size: clamp(1.5rem, 7vw, 2.5rem);
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
-            h1 span {
-                font-size: 1.5rem;
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 0 20px;
+                    margin-top: 60px !important;
+                }
+                h1 {
+                    flex-direction: row;
+                    line-height: 1.2;
+                }
+                h1 span {
+                    font-size: 1.5rem;
+                }
             }
-        }
-    </style>
-</head>
-<body>
-    <div id="cursor-glow"></div>
-    
-    <nav>
-        <a href="index.html" data-en="HOME">ACCUEIL</a>
-        <a href="studio.html" data-en="STUDIO">STUDIO</a>
-        <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
-        <a href="apropos.html" data-en="ABOUT">À PROPOS</a>
+        </style>
+    </head>
+    <body>
+        <div id="cursor-glow"></div>
 
-        <div class="lang-switch">
-            <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
-            <span>/</span>
-            <button onclick="changeLang('en')" id="btn-en">EN</button>
+        <nav>
+            <a href="index.html" data-en="HOME">ACCUEIL</a>
+            <a href="studio.html" data-en="STUDIO">STUDIO</a>
+            <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
+            <a href="apropos.html" data-en="ABOUT">À PROPOS</a>
+
+            <div class="lang-switch">
+                <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+                <span>/</span>
+                <button onclick="changeLang('en')" id="btn-en">EN</button>
+            </div>
+        </nav>
+
+        <div class="container" style="margin-top: 100px; max-width: 800px">
+            <h1 data-en="<span>/</span> PRIVACY POLICY"><span>/</span> POLITIQUE DE CONFIDENTIALITÉ</h1>
+
+            <section style="margin-top: 50px">
+                <div style="margin-bottom: 30px">
+                    <h3
+                        style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px"
+                        data-en="01. DATA COLLECTION"
+                    >
+                        01. COLLECTE DES DONNÉES
+                    </h3>
+                    <p
+                        style="color: #ccc; font-size: 0.95rem"
+                        data-en="The only data we collect is that which you provide via Messenger or social media to facilitate booking your studio sessions and our direct communication."
+                    >
+                        Les seules données collectées sont celles que vous fournissez via Messenger ou les réseaux
+                        sociaux pour faciliter la réservation de vos sessions studio et la communication directe entre
+                        nous.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 30px">
+                    <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px" data-en="02. SECURITY">
+                        02. SÉCURITÉ
+                    </h3>
+                    <p
+                        style="color: #ccc; font-size: 0.95rem"
+                        data-en="Your data is transmitted via a secure protocol (SSL). We commit to never selling or sharing your information for commercial purposes."
+                    >
+                        Vos données sont transmises via un protocole sécurisé (SSL). Nous nous engageons à ne jamais
+                        vendre ou partager vos informations à des fins commerciales.
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 30px">
+                    <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px" data-en="03. YOUR RIGHTS">
+                        03. VOS DROITS
+                    </h3>
+                    <p
+                        style="color: #ccc; font-size: 0.95rem"
+                        data-en="In accordance with GDPR, you have the right to access, modify, and completely delete your data. For any withdrawal request, contact me directly on Instagram or via Messenger."
+                    >
+                        Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression totale
+                        de vos données. Pour toute demande de retrait, contactez-moi directement sur Instagram ou via
+                        Messenger.
+                    </p>
+                </div>
+            </section>
+
+            <a
+                href="studio.html"
+                data-en="BACK TO STUDIO"
+                style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-top: 40px;
+                    color: var(--blue);
+                    text-decoration: none;
+                    border: 1px solid var(--blue);
+                    padding: 12px 25px;
+                    font-size: 0.8rem;
+                    letter-spacing: 2px;
+                    transition: 0.3s;
+                "
+                onmouseover="this.style.background='rgba(0, 210, 255, 0.1)'"
+                onmouseout="this.style.background='transparent'"
+            >
+                <i class="fas fa-arrow-left"></i> RETOUR AU STUDIO
+            </a>
         </div>
-    </nav>
 
-    <div class="container" style="margin-top: 100px; max-width: 800px;">
-        <h1 data-en="<span>/</span> PRIVACY POLICY"><span>/</span> POLITIQUE DE CONFIDENTIALITÉ</h1>
-        
-        <section style="margin-top: 50px;">
-            <div style="margin-bottom: 30px;">
-                <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px;" data-en="01. DATA COLLECTION">01. COLLECTE DES DONNÉES</h3>
-                <p style="color: #ccc; font-size: 0.95rem;" data-en="The only data we collect is that which you provide via Messenger or social media to facilitate booking your studio sessions and our direct communication.">Les seules données collectées sont celles que vous fournissez via Messenger ou les réseaux sociaux pour faciliter la réservation de vos sessions studio et la communication directe entre nous.</p>
+        <footer>
+            <div class="social-links">
+                <a href="https://instagram.com/mrnox_tv" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@mrnox_tv" target="_blank"><i class="fab fa-tiktok"></i></a>
             </div>
+            <p>MR NOX TV &copy; 2026</p>
+        </footer>
 
-            <div style="margin-bottom: 30px;">
-                <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px;" data-en="02. SECURITY">02. SÉCURITÉ</h3>
-                <p style="color: #ccc; font-size: 0.95rem;" data-en="Your data is transmitted via a secure protocol (SSL). We commit to never selling or sharing your information for commercial purposes.">Vos données sont transmises via un protocole sécurisé (SSL). Nous nous engageons à ne jamais vendre ou partager vos informations à des fins commerciales.</p>
-            </div>
-
-            <div style="margin-bottom: 30px;">
-                <h3 style="color: var(--pink); font-size: 0.9rem; letter-spacing: 2px;" data-en="03. YOUR RIGHTS">03. VOS DROITS</h3>
-                <p style="color: #ccc; font-size: 0.95rem;" data-en="In accordance with GDPR, you have the right to access, modify, and completely delete your data. For any withdrawal request, contact me directly on Instagram or via Messenger.">Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression totale de vos données. Pour toute demande de retrait, contactez-moi directement sur Instagram ou via Messenger.</p>
-            </div>
-        </section>
-
-        <a href="studio.html" data-en="BACK TO STUDIO" style="display: inline-flex; align-items: center; gap: 10px; margin-top: 40px; color: var(--blue); text-decoration: none; border: 1px solid var(--blue); padding: 12px 25px; font-size: 0.8rem; letter-spacing: 2px; transition: 0.3s;" onmouseover="this.style.background='rgba(0, 210, 255, 0.1)'" onmouseout="this.style.background='transparent'">
-            <i class="fas fa-arrow-left"></i> RETOUR AU STUDIO
-        </a>
-    </div>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://instagram.com/mrnox_tv" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@mrnox_tv" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-        <p>MR NOX TV &copy; 2026</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>

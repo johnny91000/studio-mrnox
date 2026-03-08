@@ -1,108 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commander | MR NOX TV</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <div id="cursor-glow"></div>
-    
-    <nav>
-        <a href="index.html" data-en="HOME">ACCUEIL</a>
-        <a href="studio.html" class="active" data-en="STUDIO">STUDIO</a>
-        <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
-        <a href="apropos.html" data-en="ABOUT">À PROPOS</a>
-        
-        <div class="lang-switch">
-            <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
-            <span>/</span>
-            <button onclick="changeLang('en')" id="btn-en">EN</button>
-        </div>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Commander | MR NOX TV</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body>
+        <div id="cursor-glow"></div>
 
-    <div class="container">
-        <section id="commander">
-            <div class="section-header">
-                <span class="subtitle" data-en="BOOKING SYSTEM">SYSTÈME DE RÉSERVATION</span>
-                <h2 data-en="<span>/</span> BOOK A SESSION"><span>/</span> RÉSERVER UNE SESSION</h2>
+        <nav>
+            <a href="index.html" data-en="HOME">ACCUEIL</a>
+            <a href="studio.html" class="active" data-en="STUDIO">STUDIO</a>
+            <a href="creations.html" data-en="CREATIONS">CRÉATIONS</a>
+            <a href="apropos.html" data-en="ABOUT">À PROPOS</a>
+
+            <div class="lang-switch">
+                <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+                <span>/</span>
+                <button onclick="changeLang('en')" id="btn-en">EN</button>
             </div>
+        </nav>
 
-            <div class="order-box-premium">
-                <form data-netlify="true" name="contact-studio" method="POST">
-                    <input type="hidden" name="form-name" value="contact-studio">
-                    
-                    <div class="form-main-grid">
-                        <div class="form-row">
-                            <div class="input-wrapper">
-                                <i class="fas fa-signature"></i>
-                                <input type="text" name="name" placeholder="NOM D'ARTISTE" data-en="ARTIST NAME" required>
+        <div class="container">
+            <section id="commander">
+                <div class="section-header">
+                    <span class="subtitle" data-en="BOOKING SYSTEM">SYSTÈME DE RÉSERVATION</span>
+                    <h2 data-en="<span>/</span> BOOK A SESSION"><span>/</span> RÉSERVER UNE SESSION</h2>
+                </div>
+
+                <div class="order-box-premium">
+                    <form data-netlify="true" name="contact-studio" method="POST">
+                        <input type="hidden" name="form-name" value="contact-studio" />
+
+                        <div class="form-main-grid">
+                            <div class="form-row">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-signature"></i>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="NOM D'ARTISTE"
+                                        data-en="ARTIST NAME"
+                                        required
+                                    />
+                                </div>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-at"></i>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="VOTRE EMAIL"
+                                        data-en="YOUR EMAIL"
+                                        required
+                                    />
+                                </div>
                             </div>
+
+                            <div class="form-row">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-compact-disc"></i>
+                                    <select name="service" required>
+                                        <option value="" disabled selected data-en="CHOOSE A SERVICE">
+                                            CHOISIR UN SERVICE
+                                        </option>
+                                        <option value="instru" data-en="BEAT ONLY - 5€">INSTRU SEULE - 5€</option>
+                                        <option value="pack" data-en="FULL PACK - 10€">PACK COMPLET - 10€</option>
+                                        <option value="album" data-en="FULL PROJECT - QUOTE">
+                                            PROJET COMPLET - DEVIS
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <input type="date" name="date_preferee" required />
+                                </div>
+                            </div>
+
                             <div class="input-wrapper">
-                                <i class="fas fa-at"></i>
-                                <input type="email" name="email" placeholder="VOTRE EMAIL" data-en="YOUR EMAIL" required>
+                                <i class="fas fa-terminal"></i>
+                                <textarea
+                                    name="details"
+                                    rows="4"
+                                    placeholder="DÉTAILS DU PROJET (BPM, STYLE, RÉFÉRENCES...)"
+                                    data-en="PROJECT DETAILS (BPM, STYLE, REFERENCES...)"
+                                    required
+                                ></textarea>
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="input-wrapper">
-                                <i class="fas fa-compact-disc"></i>
-                                <select name="service" required>
-                                    <option value="" disabled selected data-en="CHOOSE A SERVICE">CHOISIR UN SERVICE</option>
-                                    <option value="instru" data-en="BEAT ONLY - 5€">INSTRU SEULE - 5€</option>
-                                    <option value="pack" data-en="FULL PACK - 10€">PACK COMPLET - 10€</option>
-                                    <option value="album" data-en="FULL PROJECT - QUOTE">PROJET COMPLET - DEVIS</option>
-                                </select>
-                            </div>
-                            <div class="input-wrapper">
-                                <i class="fas fa-calendar-day"></i>
-                                <input type="date" name="date_preferee" required>
-                            </div>
-                        </div>
+                        <button type="submit" class="btn-studio-neon">
+                            <span data-en="LAUNCH PROJECT">LANCER LE PROJET</span> <i class="fas fa-rocket"></i>
+                        </button>
+                    </form>
 
-                        <div class="input-wrapper">
-                            <i class="fas fa-terminal"></i>
-                            <textarea name="details" rows="4" placeholder="DÉTAILS DU PROJET (BPM, STYLE, RÉFÉRENCES...)" data-en="PROJECT DETAILS (BPM, STYLE, REFERENCES...)" required></textarea>
-                        </div>
+                    <div class="privacy-link" style="margin-top: 20px; text-align: center">
+                        <a
+                            href="legal.html"
+                            style="
+                                color: #444;
+                                font-size: 0.65rem;
+                                text-decoration: none;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                                transition: 0.3s;
+                            "
+                        >
+                            <span data-en="Secured data • ">Données sécurisées • </span
+                            ><span style="text-decoration: underline" data-en="Privacy Policy"
+                                >Politique de confidentialité</span
+                            >
+                        </a>
                     </div>
+                </div>
 
-                    <button type="submit" class="btn-studio-neon">
-                        <span data-en="LAUNCH PROJECT">LANCER LE PROJET</span> <i class="fas fa-rocket"></i>
-                    </button>
-                </form>
+                <div
+                    class="reviews-header"
+                    style="
+                        margin-top: 80px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid #222;
+                        padding-bottom: 20px;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                    "
+                >
+                    <h2 style="margin: 0" data-en="<span>/</span> CUSTOMER REVIEWS"><span>/</span> AVIS CLIENTS</h2>
 
-                <div class="privacy-link" style="margin-top: 20px; text-align: center;">
-                    <a href="legal.html" style="color: #444; font-size: 0.65rem; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s;">
-                        <span data-en="Secured data • ">Données sécurisées • </span><span style="text-decoration: underline;" data-en="Privacy Policy">Politique de confidentialité</span>
+                    <a
+                        href="https://senja.io/p/google-o5K/r/KpUwd9"
+                        target="_blank"
+                        class="btn-redirection-avis"
+                        style="text-decoration: none"
+                    >
+                        <span data-en="LEAVE A REVIEW">LAISSER UN RETOUR</span> <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
-            </div> 
 
-            <div class="reviews-header" style="margin-top: 80px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; padding-bottom: 20px; flex-wrap: wrap; gap: 20px;">
-                <h2 style="margin: 0;" data-en="<span>/</span> CUSTOMER REVIEWS"><span>/</span> AVIS CLIENTS</h2>
-
-                <a href="https://senja.io/p/google-o5K/r/KpUwd9" target="_blank" class="btn-redirection-avis" style="text-decoration: none;">
-                    <span data-en="LEAVE A REVIEW">LAISSER UN RETOUR</span> <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-
-            <div style="margin-top: 40px;">
-                <script src="https://widget.senja.io/widget/5cc37e42-3367-4065-a6f0-03d722b05cd9/platform.js" type="text/javascript" async></script>
-                <div class="senja-embed" data-id="5cc37e42-3367-4065-a6f0-03d722b05cd9" data-mode="shadow" data-lazyload="false" style="display: block; width: 100%;"></div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <div style="margin-bottom: 25px;">
-            <a href="https://instagram.com/mrnox_tv" target="_blank" style="color: var(--blue); font-size: 1.5rem; margin: 0 15px;"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@mrnox_tv" target="_blank" style="color: var(--blue); font-size: 1.5rem; margin: 0 15px;"><i class="fab fa-tiktok"></i></a>
+                <div style="margin-top: 40px">
+                    <script
+                        src="https://widget.senja.io/widget/5cc37e42-3367-4065-a6f0-03d722b05cd9/platform.js"
+                        type="text/javascript"
+                        async
+                    ></script>
+                    <div
+                        class="senja-embed"
+                        data-id="5cc37e42-3367-4065-a6f0-03d722b05cd9"
+                        data-mode="shadow"
+                        data-lazyload="false"
+                        style="display: block; width: 100%"
+                    ></div>
+                </div>
+            </section>
         </div>
-        <p>&copy; 2026 MR NOX TV</p>
-    </footer>
 
-    <script src="script.js"></script>
-</body>
+        <footer>
+            <div style="margin-bottom: 25px">
+                <a
+                    href="https://instagram.com/mrnox_tv"
+                    target="_blank"
+                    style="color: var(--blue); font-size: 1.5rem; margin: 0 15px"
+                    ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                    href="https://tiktok.com/@mrnox_tv"
+                    target="_blank"
+                    style="color: var(--blue); font-size: 1.5rem; margin: 0 15px"
+                    ><i class="fab fa-tiktok"></i
+                ></a>
+            </div>
+            <p>&copy; 2026 MR NOX TV</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
