@@ -818,10 +818,3 @@ select option {
     background: radial-gradient(circle, transparent 20%, #000 100%);
     z-index: -1;
 }
-
-/* On cache la vidéo sur mobile pour la performance (score PageSpeed) */
-@media (max-width: 768px) {
-    .video-bg {
-        display: none;
-    }
-}
