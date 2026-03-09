@@ -790,3 +790,103 @@ select option {
         margin-left: 5px;
     }
 }
+
+/* --- SECTION RESERVATION (CARDS) --- */
+.order-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pricing-card {
+    background: rgba(17, 17, 22, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.highlight {
+    transform: scale(1.05);
+    border: 1px solid var(--blue);
+    z-index: 2;
+}
+
+.pink-glow:hover { 
+    box-shadow: 0 0 40px rgba(255, 45, 149, 0.2); 
+    border-color: var(--pink);
+    transform: translateY(-10px);
+}
+
+.blue-glow:hover { 
+    box-shadow: 0 0 40px rgba(0, 210, 255, 0.2); 
+    border-color: var(--blue);
+    transform: translateY(-10px);
+}
+
+.card-header .service-name {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.card-header .price {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.features li {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.features i {
+    color: var(--blue);
+    font-size: 0.8rem;
+}
+
+.btn-order {
+    display: block;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-order.pink { background: var(--pink); color: white; }
+.btn-order.blue { background: var(--blue); color: black; }
+
+.btn-order:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+    .pricing-card.highlight {
+        transform: scale(1);
+    }
+}
