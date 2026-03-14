@@ -2,7 +2,7 @@ server {
     listen 80;
     server_name studio-mrnox.com www.studio-mrnox.com;
 
-    root /var/www/mrnox; 
+    root /var/www/studio-mrnox; 
     index accueil.html;
 
     location / {
@@ -10,7 +10,7 @@ server {
     }
 
     location = /pages/merci.html {
-        valid_referers none blocked mrnox.tv *.mrnox.tv studio-mrnox.tv *.studio-mrnox.com;
+        valid_referers none blocked mrnox.tv *.mrnox.tv studio-mrnox.com *.studio-mrnox.com;
         
         # Note l'espace après le 'if' : indispensable en Nginx
         if ($invalid_referer) {
