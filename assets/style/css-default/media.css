@@ -1,0 +1,51 @@
+@import url(default.css);
+
+@media (max-width: 768px) {
+    .glitch-text {
+        font-size: 5rem;
+    }
+
+    #navigation-bar {
+        gap: 15px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .messenger-sticky span {
+        display: none;
+    }
+
+    #cursor-glow {
+        display: none !important;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .equalizer {
+        height: 160px;
+    }
+
+    .bar {
+        width: 8px;
+    }
+
+    .pricing-card.highlight {
+        transform: scale(1);
+    }
+
+    .price {
+        font-size: 2.8rem;
+    }
+}

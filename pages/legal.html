@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confidentialité | MR NOX TV</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/legal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <div id="cursor-glow"></div>
+
+    <nav class="py-3 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div id="navigation-bar" class="d-flex gap-4">
+                <a class="nav-link cursor-pointer" data-en="HOME" data-redirection="accueil">ACCUEIL</a>
+                <a class="nav-link cursor-pointer" data-en="STUDIO" data-redirection="studio">STUDIO</a>
+                <a class="nav-link cursor-pointer" data-en="CREATIONS" data-redirection="creations">CRÉATIONS</a>
+                <a class="nav-link cursor-pointer" data-en="ABOUT" data-redirection="apropos">À PROPOS</a>
+            </div>
+
+            <div class="lang-switch">
+                <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+                <span class="text-secondary mx-1">/</span>
+                <button onclick="changeLang('en')" id="btn-en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container legal-container">
+        <h1 class="legal-title">
+            <span>/</span> <span data-en="PRIVACY POLICY">POLITIQUE DE CONFIDENTIALITÉ</span>
+        </h1>
+
+        <div class="legal-content">
+            <section class="legal-section">
+                <h3 data-en="01. DATA COLLECTION">01. COLLECTE DES DONNÉES</h3>
+                <p
+                    data-en="The only data we collect is that which you provide via Messenger or social media to facilitate booking your studio sessions and our direct communication.">
+                    Les seules données collectées sont celles que vous fournissez via Messenger ou les réseaux sociaux
+                    pour faciliter la réservation de vos sessions studio et la communication directe entre nous.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h3 data-en="02. SECURITY">02. SÉCURITÉ</h3>
+                <p
+                    data-en="Your data is transmitted via a secure protocol (SSL). We commit to never selling or sharing your information for commercial purposes.">
+                    Vos données sont transmises via un protocole sécurisé (SSL). Nous nous engageons à ne jamais vendre
+                    ou partager vos informations à des fins commerciales.
+                </p>
+            </section>
+
+            <section class="legal-section">
+                <h3 data-en="03. YOUR RIGHTS">03. VOS DROITS</h3>
+                <p
+                    data-en="In accordance with GDPR, you have the right to access, modify, and completely delete your data. For any withdrawal request, contact me directly on Instagram or via Messenger.">
+                    Conformément au RGPD, vous disposez d'un droit d'accès, de modification et de suppression totale de
+                    vos données. Pour toute demande de retrait, contactez-moi directement sur Instagram ou via
+                    Messenger.
+                </p>
+            </section>
+        </div>
+
+        <a class="btn-retour cursor-pointer" data-redirection="studio" data-en="BACK TO STUDIO">
+            <i class="fas fa-arrow-left"></i> RETOUR AU STUDIO
+        </a>
+    </main>
+
+    <footer class="py-5 mt-5 border-dark">
+        <div class="container text-center">
+            <div class="social-links mb-4">
+                <a href="https://instagram.com/mrnox_tv" target="_blank" class="mx-3 fs-3"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@mrnox_tv" target="_blank" class="mx-3 fs-3"><i
+                        class="fab fa-tiktok"></i></a>
+            </div>
+            <p>MR NOX TV &copy; <span id="year"></span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/redirection.js"></script>
+</body>
+
+</html>

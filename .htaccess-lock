@@ -1,0 +1,29 @@
+ErrorDocument 404 /pages/404.html
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+Options -Indexes
+
+ServerSignature Off
+
+# Protection contre le vol d'images (Hotlinking)
+# Remplace "mrnox.tv" par ton vrai domaine
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?studio-mrnox.tv [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [F]
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+</IfModule>
+
+RewriteCond %

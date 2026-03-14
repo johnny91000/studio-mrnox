@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commander | MR NOX TV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style/studio.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <div id="cursor-glow"></div>
+
+    <nav class="py-3 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div id="navigation-bar" class="d-flex gap-4">
+                <a class="nav-link cursor-pointer" data-en="HOME" data-redirection="accueil">ACCUEIL</a>
+                <a class="nav-link cursor-pointer active" data-en="STUDIO" data-redirection="studio">STUDIO</a>
+                <a class="nav-link cursor-pointer" data-en="CREATIONS" data-redirection="creations">CRÉATIONS</a>
+                <a class="nav-link cursor-pointer" data-en="ABOUT" data-redirection="apropos">À PROPOS</a>
+            </div>
+
+            <div class="lang-switch">
+                <button onclick="changeLang('fr')" id="btn-fr" class="active">FR</button>
+                <span class="text-secondary mx-1">/</span>
+                <button onclick="changeLang('en')" id="btn-en">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <section id="commander">
+            <div class="section-header mb-5">
+                <span class="subtitle d-block mb-2" data-en="BOOKING SYSTEM">SYSTÈME DE RÉSERVATION</span>
+                <h2 class="fw-black text-uppercase">
+                    <span>/</span> <span data-en="BOOK A SESSION">RÉSERVER UNE SESSION</span>
+                </h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pricing-card pink-glow d-flex flex-column h-100">
+                        <div class="card-header bg-transparent border-0 p-0">
+                            <span class="service-name" data-en="STARTER">INSTRU SEULE</span>
+                            <div class="price">5€</div>
+                        </div>
+                        <ul class="features flex-grow-1">
+                            <li data-en="HQ Audio File"><i class="fas fa-check"></i> Fichier Haute Qualité</li>
+                            <li data-en="Commercial Use"><i class="fas fa-check"></i> Usage Commercial</li>
+                            <li data-en="Instant Delivery"><i class="fas fa-check"></i> Livraison Rapide</li>
+                        </ul>
+                        <a href="https://m.me/61564227401513" target="_blank" class="btn-order pink"
+                            data-en="BOOK NOW">RÉSERVER</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pricing-card blue-glow highlight d-flex flex-column h-100">
+                        <div class="card-header bg-transparent border-0 p-0">
+                            <span class="service-name" data-en="PREMIUM">PACK COMPLET</span>
+                            <div class="price">10€</div>
+                        </div>
+                        <ul class="features flex-grow-1">
+                            <li data-en="STEMS Files (WAV)"><i class="fas fa-check"></i> Fichiers STEMS (WAV)</li>
+                            <li data-en="Mixing Included"><i class="fas fa-check"></i> Mixage de l'Instru</li>
+                            <li data-en="Full License"><i class="fas fa-check"></i> Licence Illimitée</li>
+                        </ul>
+                        <a href="https://m.me/61564227401513" target="_blank" class="btn-order blue"
+                            data-en="BOOK NOW">RÉSERVER</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="pricing-card pink-glow d-flex flex-column h-100">
+                        <div class="card-header bg-transparent border-0 p-0">
+                            <span class="service-name" data-en="EXCLUSIVE">PROJET COMPLET</span>
+                            <div class="price">DEVIS</div>
+                        </div>
+                        <ul class="features flex-grow-1">
+                            <li data-en="Custom Composition"><i class="fas fa-check"></i> Prod Sur-Mesure</li>
+                            <li data-en="Vocals Mix & Master"><i class="fas fa-check"></i> Mix/Master Voix</li>
+                            <li data-en="Full Support"><i class="fas fa-check"></i> Suivi Personnalisé</li>
+                        </ul>
+                        <a href="https://m.me/61564227401513" target="_blank" class="btn-order purple"
+                            data-en="CONTACT ME">CONTACTER</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="reviews-header mt-5 pt-5 d-flex justify-content-between align-items-center flex-wrap gap-3 border-top border-secondary">
+                <h2 class="m-0 text-uppercase fw-bold">
+                    <span>/</span> <span data-en="CUSTOMER REVIEWS">AVIS CLIENTS</span>
+                </h2>
+                <a href="https://senja.io/p/google-o5K/r/KpUwd9" target="_blank" class="btn-redirection-avis">
+                    <span data-en="LEAVE A REVIEW">LAISSER UN RETOUR</span>
+                    <i class="fas fa-external-link-alt ms-2"></i>
+                </a>
+            </div>
+
+            <div class="mt-4">
+                <script src="https://widget.senja.io/widget/5cc37e42-3367-4065-a6f0-03d722b05cd9/platform.js"
+                    type="text/javascript" async></script>
+                <div class="senja-embed" data-id="5cc37e42-3367-4065-a6f0-03d722b05cd9" data-mode="shadow"
+                    data-lazyload="false"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="py-5 mt-5 border-dark">
+        <div class="container text-center">
+            <div class="social-links mb-4">
+                <a href="https://instagram.com/mrnox_tv" target="_blank" class="mx-3 fs-3"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@mrnox_tv" target="_blank" class="mx-3 fs-3"><i
+                        class="fab fa-tiktok"></i></a>
+            </div>
+            <p>MR NOX TV &copy; <span id="year"></span></p>
+        </div>
+    </footer>
+
+    <a href="https://m.me/61564227401513" class="messenger-sticky d-flex align-items-center gap-2" target="_blank">
+        <i class="fab fa-facebook-messenger"></i>
+        <span data-en="Any questions?">Des questions ?</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/redirection.js"></script>
+</body>
+
+</html>

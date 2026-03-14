@@ -1,0 +1,28 @@
+server {
+    listen 80;
+    server_name mrnox.tv www.mrnox.tv;
+
+    root /var/www/mrnox; 
+    index accueil.html;
+    location / {
+        try_files $uri $uri/ $uri.html =404;
+    }
+
+    # 2. PAGE D'ERREUR 404
+    error_page 404 /pages/404.html;
+    location = /pages/404.html {
+        internal;
+    }
+
+    autoindex off;
+
+    location ~* \.(css|js|jpg|jpeg|png|gif|ico|webp|svg|woff|woff2)$ {
+        expires 1M;
+        access_log off;
+        add_header Cache-Control "public";
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+}

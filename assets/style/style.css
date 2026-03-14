@@ -1,0 +1,232 @@
+@import url(./css-default/default.css);
+@import url(./css-default/footer.css);
+@import url(./css-default/header.css);
+@import url(./css-default/media.css);
+
+
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    filter: blur(150px);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.hero::before {
+    background: var(--blue);
+    left: -300px;
+}
+
+.hero::after {
+    background: var(--pink);
+    right: -300px;
+}
+
+.logo-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0%, var(--blue) 25%, transparent 50%, var(--pink) 75%, transparent 100%);
+    animation: rotateGlow 4s linear infinite;
+    filter: blur(15px);
+}
+
+@keyframes rotateGlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.equalizer {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    height: 200px;
+    /* Taille augmentée */
+    width: 100%;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.bar {
+    width: 12px;
+    background: linear-gradient(to top, var(--blue), var(--pink));
+    border-radius: 20px;
+    animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+.bar:nth-child(1) {
+    height: 85%;
+    animation-delay: 0.1s;
+}
+
+.bar:nth-child(2) {
+    height: 85%;
+    animation-delay: 0.3s;
+}
+
+.bar:nth-child(3) {
+    height: 100%;
+    animation-delay: 0.2s;
+}
+
+.bar:nth-child(4) {
+    height: 90%;
+    animation-delay: 0.4s;
+}
+
+.bar:nth-child(5) {
+    height: 90%;
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scaleY(0.3);
+    }
+
+    100% {
+        transform: scaleY(1.1);
+    }
+}
+
+.logo-main {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    letter-spacing: 6px;
+    background: linear-gradient(to right, var(--pink), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.btn-main {
+    padding: 15px 40px;
+    background: linear-gradient(45deg, var(--pink), var(--blue));
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+}
+
+.order-box {
+    background: var(--card);
+    border: 1px solid #222;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.order-box i {
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.order-box:hover {
+    border-color: var(--blue);
+    transform: translateY(-5px);
+}
+
+.about-section {
+    background: var(--card);
+    border: 1px solid #222;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.badge {
+    color: var(--pink) !important;
+    border: 1px solid var(--pink);
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.stat-number {
+    color: var(--blue);
+}
+
+.touch-ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 210, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple-animation 0.6s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes ripple-animation {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
+
+input[type="date"],
+select,
+select option {
+    color-scheme: dark;
+    background-color: #000000 !important;
+    color: white !important;
+}
+
+
+.section-title span {
+    color: var(--pink);
+    text-shadow: 0 0 10px var(--pink);
+}

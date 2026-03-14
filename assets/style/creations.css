@@ -1,0 +1,92 @@
+@import url(./css-default/default.css);
+@import url(./css-default/footer.css);
+@import url(./css-default/header.css);
+@import url(./css-default/media.css);
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink);
+}
+
+.section-title {
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+}
+
+.section-title span:first-child {
+    color: var(--pink);
+    text-shadow: 0 0 10px var(--pink);
+    margin-right: 10px;
+}
+
+/* --- PORTFOLIO CARDS --- */
+.portfolio-card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--blue);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cover-art {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.pink-glow {
+    box-shadow: 0 10px 30px rgba(255, 45, 149, 0.2);
+}
+
+.blue-glow {
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+}
+
+.title-pink {
+    color: var(--pink);
+    font-weight: 800;
+}
+
+.title-blue {
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.btn-listen {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 35px;
+    background: transparent;
+    border: 1px solid white;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-listen:hover {
+    background: white;
+    color: black !important;
+}
