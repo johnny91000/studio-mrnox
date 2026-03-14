@@ -1,14 +1,23 @@
 server {
     listen 80;
-    server_name mrnox.tv www.mrnox.tv;
+    server_name studio-mrnox.com www.studio-mrnox.com;
 
     root /var/www/mrnox; 
     index accueil.html;
+
     location / {
         try_files $uri $uri/ $uri.html =404;
     }
 
-    # 2. PAGE D'ERREUR 404
+    location = /pages/merci.html {
+        valid_referers none blocked mrnox.tv *.mrnox.tv studio-mrnox.tv *.studio-mrnox.com;
+        
+        # Note l'espace après le 'if' : indispensable en Nginx
+        if ($invalid_referer) {
+            return 301 /;
+        }
+    }
+
     error_page 404 /pages/404.html;
     location = /pages/404.html {
         internal;
