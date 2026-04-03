@@ -1,18 +1,24 @@
+DirectoryIndex accueil.html
+
+Options -Indexes
+ServerSignature Off
+
 ErrorDocument 404 /pages/404.html
 
 RewriteEngine On
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteRule ^pages/404\.html$ / [R=301,L]
 
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?studio-mrnox\.com [NC]
-RewriteRule ^pages/merci\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/accueil\.html [NC]
+RewriteRule ^accueil\.html$ /accueil [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-Options -Indexes
-ServerSignature Off
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^pages/404\.html$ / [R=301,L]
+
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?studio-mrnox\.com [NC]
+RewriteRule ^pages/merci\.html$ / [R=301,L]
 
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^https?://(www\.)?studio-mrnox\.com [NC]
@@ -25,7 +31,6 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
     ExpiresByType application/javascript "access plus 1 week"
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresByType image/png "access plus 1 month"
-    ExpiresByType image/jpg "access plus 1 month"
     ExpiresByType image/jpeg "access plus 1 month"
     ExpiresByType image/webp "access plus 1 month"
 </IfModule>
