@@ -1,0 +1,57 @@
+@import url(default.css);
+
+nav {
+    background: rgba(10, 10, 12, 0.9);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+}
+
+nav .nav-link {
+    color: white !important;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav .nav-link:hover {
+    opacity: 1;
+    color: var(--pink) !important;
+}
+
+nav .nav-link.active {
+    opacity: 1;
+    color: var(--blue) !important;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.lang-switch button.active {
+    opacity: 1;
+    color: var(--blue) !important;
+    text-shadow: 0 0 10px var(--blue);
+}
+
+.section-header .subtitle {
+    color: var(--pink);
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: block;
+}
+
+.section-header h2 {
+    font-weight: 900;
+    letter-spacing: 2px;
+}

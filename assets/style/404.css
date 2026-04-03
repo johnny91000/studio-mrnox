@@ -1,0 +1,55 @@
+@import url(./css-default/default.css);
+@import url(./css-default/header.css);
+@import url(./css-default/media.css);
+
+.error-wrapper {
+    height: calc(100vh - 80px);
+    position: relative;
+}
+
+.glitch-text {
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    background: linear-gradient(to right, var(--pink), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(255, 45, 149, 0.3));
+    position: relative;
+}
+
+.error-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--pink);
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+h2 {
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.btn-main {
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid var(--blue);
+    color: var(--blue) !important;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+.btn-main:hover {
+    background: var(--blue) !important;
+    color: #000 !important;
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+    transform: scale(1.05);
+}

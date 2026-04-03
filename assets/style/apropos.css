@@ -1,0 +1,88 @@
+@import url(./css-default/default.css);
+@import url(./css-default/footer.css);
+@import url(./css-default/header.css);
+@import url(./css-default/media.css);
+
+.section-title {
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.section-title span:first-child {
+    color: var(--pink);
+    text-shadow: 0 0 10px var(--pink);
+}
+
+.subtitle {
+    opacity: 0.5;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.about-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.profile-img {
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+}
+
+.profile-img:hover {
+    transform: scale(1.02);
+    border-color: var(--blue);
+}
+
+.about-text-content p {
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.signature {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: var(--pink);
+    margin-top: 20px;
+    opacity: 0.8;
+    transition-duration: 0.5s;
+}
+
+.order-box {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.order-box:hover {
+    border-color: var(--pink);
+    transform: translateY(-5px);
+}
+
+.order-box i {
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+.signature:hover {
+    color: white;
+    text-shadow: 0 0 15px var(--pink);
+    transform: skewX(-5deg) scale(1.05);
+    transition-duration: 0.5s;
+}

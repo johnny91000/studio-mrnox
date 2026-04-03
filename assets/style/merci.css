@@ -1,0 +1,84 @@
+@import url(./css-default/default.css);
+@import url(./css-default/footer.css);
+@import url(./css-default/header.css);
+@import url(./css-default/media.css);
+
+
+/* --- HERO & BOX --- */
+.hero {
+    height: calc(100vh - 80px);
+    position: relative;
+}
+
+.thank-you-box {
+    background: rgba(17, 17, 22, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.icon-success {
+    font-size: 4rem;
+    background: linear-gradient(45deg, var(--pink), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.3));
+}
+
+h1.demande-reçu {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    background: linear-gradient(to right, var(--pink), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-main {
+    padding: 15px 40px;
+    background: linear-gradient(45deg, var(--pink), var(--blue));
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-main:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.5);
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1.demande-reçu {
+        font-size: 2rem;
+    }
+
+    .thank-you-box {
+        padding: 30px 20px !important;
+        margin: 0 15px;
+    }
+}

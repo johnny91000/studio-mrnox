@@ -1,0 +1,134 @@
+@import url(./css-default/default.css);
+@import url(./css-default/footer.css);
+@import url(./css-default/header.css);
+@import url(./css-default/media.css);
+
+
+/* Les Cartes */
+.pricing-card {
+    background: var(--card) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card.highlight {
+    border: 2px solid var(--blue) !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.15);
+}
+
+/* Effets de lueur au survol */
+.pink-glow:hover { 
+    box-shadow: 0 0 40px rgba(255, 45, 149, 0.2); 
+    border-color: var(--pink) !important;
+    transform: translateY(-10px);
+}
+
+.blue-glow:hover { 
+    box-shadow: 0 0 40px rgba(0, 210, 255, 0.2); 
+    border-color: var(--blue) !important;
+    transform: translateY(-10px);
+}
+
+.service-name {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #888;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    margin: 15px 0 30px 0;
+}
+
+/* Liste à puces */
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.features li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.features li i {
+    color: var(--blue);
+    font-size: 0.8rem;
+}
+
+
+.btn-order {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none !important;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    border: none;
+}
+
+.btn-order.pink {
+    background: var(--pink);
+    color: white !important;
+}
+
+.btn-order.blue {
+    background: var(--blue);
+    color: black !important;
+}
+
+.btn-order.purple {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+}
+
+.btn-order.purple:hover {
+    background: white !important;
+    color: black !important;
+    border-color: white !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.btn-redirection-avis {
+    padding: 10px 20px;
+    border: 1px solid var(--blue);
+    color: var(--blue) !important;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-redirection-avis:hover {
+    background: var(--blue);
+    color: #000 !important;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+    transform: translateY(-2px);
+}
