@@ -1,23 +1,10 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
-      "destination": "/accueil"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/pages/404.html",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-vercel-id"
-        }
-      ]
+      "destination": "/accueil",
+      "permanent": true
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "status": 404, "dest": "/pages/404.html" }
-  ]
+  "cleanUrls": true
 }
